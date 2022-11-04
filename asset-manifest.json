@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cyborgsnfc/static/css/main.073c9b0a.css",
+    "main.js": "/cyborgsnfc/static/js/main.7e745ff6.js",
+    "index.html": "/cyborgsnfc/index.html",
+    "main.073c9b0a.css.map": "/cyborgsnfc/static/css/main.073c9b0a.css.map",
+    "main.7e745ff6.js.map": "/cyborgsnfc/static/js/main.7e745ff6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.7e745ff6.js"
+  ]
+}

@@ -12,12 +12,12 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <NotFound />,
-    children: [
-      { index: true, element: <Login /> },
-      { path: 'record', element: <Record /> },
-      { path: 'user01', element: <Login userId='nfc01@nfc.com' userPw='wearecyborgs'/> },
-      { path: 'user02', element: <Login userId='nfc02@nfc.com' userPw='wearecyborgs'/> },
-    ],
+    // children: [
+    //   { index: true, element: <Login /> },
+    //   { path: 'record', element: <Record /> },
+    //   { path: 'user01', element: <Login userId='nfc01@nfc.com' userPw='wearecyborgs'/> },
+    //   { path: 'user02', element: <Login userId='nfc02@nfc.com' userPw='wearecyborgs'/> },
+    // ],
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

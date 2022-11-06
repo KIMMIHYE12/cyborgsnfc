@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from 'react-router-dom';
-import Record from '../../pages/Record';
 
 const Login = ({userId, userPw}) => {
   const [error, setErorr] = useState(false);

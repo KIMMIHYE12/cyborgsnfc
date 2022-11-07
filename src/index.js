@@ -1,26 +1,29 @@
-import React, { memo } from 'react';
-import ReactDOM from 'react-dom';
-import './index.module.css';
-import App from './app';
-import AuthService from './service/auth_service';
-import ImageUploader from './service/image_uploader';
-import ImageFileInput from './components/image_file_input/image_file_input';
-import CardRepository from './service/card_repository';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App';
+import NotFound from './pages/NotFound';
+import Login from './pages/Login';
+import Record from './pages/Record';
 
-const authService = new AuthService();
-const cardRepository = new CardRepository();
-const imageUploader = new ImageUploader();
-const FileInput = memo(props => (
-  <ImageFileInput {...props} imageUploader={imageUploader} />
-));
-
-ReactDOM.render(
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Login />,
+    errorElement: <NotFound />,
+    children: [
+      { index: true, element: <Login /> },
+      { path: 'record', element: <Record /> },
+      { path: 'user01', element: <Login userId='nfc01@nfc.com' userPw='wearecyborgs'/> },
+      { path: 'user02', element: <Login userId='nfc02@nfc.com' userPw='wearecyborgs'/> },
+    ],
+  },
+]);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <App
-      authService={authService}
-      FileInput={FileInput}
-      cardRepository={cardRepository}
-    />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
+

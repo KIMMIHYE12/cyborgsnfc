@@ -10,7 +10,7 @@ import Record from './pages/Record';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Login />,
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Login /> },
